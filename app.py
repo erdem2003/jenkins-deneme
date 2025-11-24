@@ -10,5 +10,10 @@ def hello():
 def bye():
     return jsonify({"message": "Goodbye from updated API!"})
 
+@app.route("/ping")
+def ping():
+    return jsonify({"message": "Pong from Jenkins CI/CD!"})
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
